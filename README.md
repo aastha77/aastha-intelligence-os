@@ -154,15 +154,21 @@ My interests include:
 
 ---
 
+## 🌐 Live Demo
+
+🔗 Portfolio:
+https://aastha-intelligence-os.vercel.app
+
+
 ## 📌 Author
 
 **Aastha Pandey**
 
 GitHub:
-https://github.com/aastha77
+🔗 https://github.com/aastha77
 
 LinkedIn:
-https://www.linkedin.com/in/aastha-pandey-401839275/
+🔗 https://www.linkedin.com/in/aastha-pandey-401839275/
 
 ---
 
