@@ -1,225 +1,192 @@
 "use client";
 
-
 import { motion } from "framer-motion";
-
-
-
-const links = [
-
-  {
-    name:"Identity",
-    href:"#home"
-  },
-
-  {
-    name:"Projects",
-    href:"#projects"
-  },
-
-  {
-    name:"Skills",
-    href:"#skills"
-  },
-
-  {
-    name:"Contact",
-    href:"#contact"
-  }
-
-];
-
-
+import { useState } from "react";
 
 
 export default function Navbar(){
 
+  const [open, setOpen] = useState(false);
 
-return (
 
+  return (
 
-<motion.nav
+    <motion.nav
 
+      initial={{
+        opacity:0,
+        y:-30
+      }}
 
-initial={{
-opacity:0,
-y:-30
-}}
+      animate={{
+        opacity:1,
+        y:0
+      }}
 
+      transition={{
+        duration:1
+      }}
 
-animate={{
-opacity:1,
-y:0
-}}
 
+      className="
+      fixed
+      top-6
+      left-1/2
+      -translate-x-1/2
+      z-50
 
-transition={{
-duration:1
-}}
+      w-[90%]
+      max-w-5xl
 
+      rounded-2xl
 
+      border
+      border-white/10
 
-className="
+      bg-white/5
 
-fixed
+      backdrop-blur-xl
 
-top-5
+      px-6
+      py-4
 
-left-1/2
+      text-white
+      "
 
--translate-x-1/2
+    >
 
-z-50
 
+      <div className="
+      flex
+      items-center
+      justify-between
+      ">
 
-w-[92%]
 
-max-w-5xl
+        <h2 className="
+        font-bold
+        text-xl
+        text-cyan-400
+        ">
 
+          AASTHA OS
 
-rounded-2xl
+        </h2>
 
 
-border
 
-border-white/10
+        <button
 
+          onClick={() => setOpen(!open)}
 
-bg-white/5
+          className="
+          md:hidden
+          text-2xl
+          "
 
+        >
 
-backdrop-blur-xl
+          ☰
 
+        </button>
 
-px-5
 
-md:px-8
 
+        <div className="
+        hidden
+        md:flex
+        gap-8
+        text-sm
+        text-gray-300
+        ">
 
-py-4
 
+          <a href="#home">
+            Identity
+          </a>
 
-flex
 
-items-center
+          <a href="#projects">
+            Projects
+          </a>
 
-justify-between
 
+          <a href="#skills">
+            Skills
+          </a>
 
-text-white
 
-"
+          <a href="#contact">
+            Contact
+          </a>
 
->
 
+        </div>
 
 
-<h2 className="
+      </div>
 
-font-bold
 
-text-lg
 
-md:text-xl
+      {open && (
 
-text-cyan-400
+        <div
 
-">
+          className="
+          md:hidden
+          mt-5
+          flex
+          flex-col
+          gap-5
+          text-gray-300
+          "
 
-AASTHA OS
+        >
 
-</h2>
 
+          <a 
+          href="#home"
+          onClick={() => setOpen(false)}
+          >
+            Identity
+          </a>
 
 
 
-{/* Desktop Menu */}
+          <a 
+          href="#projects"
+          onClick={() => setOpen(false)}
+          >
+            Projects
+          </a>
 
 
-<div className="
 
-hidden
+          <a 
+          href="#skills"
+          onClick={() => setOpen(false)}
+          >
+            Skills
+          </a>
 
-md:flex
 
-gap-8
 
-text-sm
+          <a 
+          href="#contact"
+          onClick={() => setOpen(false)}
+          >
+            Contact
+          </a>
 
-text-gray-300
 
-">
 
+        </div>
 
-{
+      )}
 
-links.map((link)=>(
 
 
-<a
+    </motion.nav>
 
-key={link.name}
-
-href={link.href}
-
-
-className="
-
-hover:text-cyan-400
-
-transition
-
-duration-300
-
-"
-
->
-
-{link.name}
-
-
-</a>
-
-
-))
-
-}
-
-
-
-</div>
-
-
-
-
-{/* Mobile Icon */}
-
-
-<button
-
-className="
-
-md:hidden
-
-text-cyan-400
-
-text-2xl
-
-"
-
->
-
-☰
-
-</button>
-
-
-
-
-</motion.nav>
-
-
-);
-
-
+  );
 }
