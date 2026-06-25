@@ -130,54 +130,99 @@ export default function Navbar(){
 
       {open && (
 
-        <div
+            <div
 
-          className="
-          md:hidden
-          mt-5
-          flex
-          flex-col
-          gap-5
-          text-gray-300
-          "
+            className="
+            md:hidden
 
+            absolute
+
+            top-full
+
+            left-0
+
+            mt-4
+
+            w-full
+
+            rounded-2xl
+
+            border
+
+            border-white/10
+
+            bg-[#030712]/95
+
+            backdrop-blur-xl
+
+            p-6
+
+            flex
+
+            flex-col
+
+            gap-5
+
+            text-white
+
+            shadow-xl
+
+            "
+
+            >
+
+
+
+        <a 
+        href="#home"
+        onClick={()=>setOpen(false)}
+
+        className="
+        hover:text-cyan-400
+        transition
+        "
         >
+        Identity
+        </a>
 
 
-          <a 
-          href="#home"
-          onClick={() => setOpen(false)}
-          >
-            Identity
-          </a>
+        <a 
+        href="#projects"
+        onClick={()=>setOpen(false)}
+
+        className="
+        hover:text-cyan-400
+        transition
+        "
+        >
+        Projects
+        </a>
 
 
+        <a 
+        href="#skills"
+        onClick={()=>setOpen(false)}
 
-          <a 
-          href="#projects"
-          onClick={() => setOpen(false)}
-          >
-            Projects
-          </a>
-
-
-
-          <a 
-          href="#skills"
-          onClick={() => setOpen(false)}
-          >
-            Skills
-          </a>
+        className="
+        hover:text-cyan-400
+        transition
+        "
+        >
+        Skills
+        </a>
 
 
+        <a 
+        href="#contact"
+        onClick={()=>setOpen(false)}
 
-          <a 
-          href="#contact"
-          onClick={() => setOpen(false)}
-          >
-            Contact
-          </a>
-
+        className="
+        hover:text-cyan-400
+        transition
+        "
+        >
+        Contact
+        </a>
 
 
         </div>
