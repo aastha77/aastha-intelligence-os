@@ -162,7 +162,7 @@ FULL STACK DEVELOPER
 
 <h1 className="
 
-text-4xl
+text-3xl
 
 md:text-7xl
 
@@ -183,15 +183,11 @@ Aastha Pandey
 
 
 <h2 className="
-
-text-xl
-
+text-lg
 md:text-2xl
-
 text-gray-400
-
 mt-5
-
+max-w-xl
 ">
 
 
@@ -210,11 +206,9 @@ with React, Node.js & AI
 <div className="
 
 flex
-
-flex-wrap
-
+flex-col
+sm:flex-row
 gap-5
-
 mt-10
 
 "
@@ -369,7 +363,7 @@ duration:1
 className="
 
 
-h-[300px]
+h-[260px]
 
 md:h-[400px]
 
