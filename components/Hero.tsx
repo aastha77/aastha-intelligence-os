@@ -2,9 +2,7 @@
 
 
 import { motion } from "framer-motion";
-
 import ThreeScene from "./ThreeScene";
-
 
 
 export default function Hero(){
@@ -20,35 +18,25 @@ id="home"
 
 
 className="
-
 min-h-screen
-
 bg-[#030712]
-
 text-white
 
 relative
-
 overflow-hidden
 
-
 flex
-
 items-center
-
-
 justify-center
 
-
 px-5
-
 md:px-8
 
 "
 
 
-
 >
+
 
 
 <div className="
@@ -69,9 +57,9 @@ blur-[120px]
 
 rounded-full
 
-"
+pointer-events-none
 
->
+">
 
 
 </div>
@@ -106,6 +94,7 @@ items-center
 
 
 
+
 {/* LEFT SIDE */}
 
 
@@ -125,9 +114,11 @@ x:-50
 
 animate={{
 
+
 opacity:1,
 
 x:0
+
 
 }}
 
@@ -135,11 +126,14 @@ x:0
 
 transition={{
 
+
 duration:1
 
 }}
 
 
+
+className="relative z-50"
 
 >
 
@@ -212,6 +206,7 @@ with React, Node.js & AI
 
 
 
+
 <div className="
 
 flex
@@ -222,7 +217,10 @@ gap-5
 
 mt-10
 
-">
+"
+
+>
+
 
 
 
@@ -232,6 +230,10 @@ href="#projects"
 
 
 className="
+
+relative
+
+z-50
 
 px-6
 
@@ -251,13 +253,14 @@ transition
 
 "
 
-
 >
+
 
 Explore Projects
 
 
 </a>
+
 
 
 
@@ -269,8 +272,14 @@ href="/resume.pdf"
 
 target="_blank"
 
+rel="noopener noreferrer"
+
 
 className="
+
+relative
+
+z-50
 
 px-6
 
@@ -299,6 +308,8 @@ Resume
 
 
 
+
+
 </div>
 
 
@@ -309,7 +320,12 @@ Resume
 
 
 
+
+
+
+
 {/* RIGHT SIDE */}
+
 
 
 
@@ -318,9 +334,11 @@ Resume
 
 initial={{
 
+
 opacity:0,
 
 scale:0.8
+
 
 }}
 
@@ -328,9 +346,11 @@ scale:0.8
 
 animate={{
 
+
 opacity:1,
 
 scale:1
+
 
 }}
 
@@ -338,13 +358,16 @@ scale:1
 
 transition={{
 
+
 duration:1
+
 
 }}
 
 
 
 className="
+
 
 h-[300px]
 
@@ -364,16 +387,36 @@ bg-white/5
 
 backdrop-blur-xl
 
+
+relative
+
+
 "
 
-
 >
+
+
+<div className="
+
+absolute
+
+inset-0
+
+pointer-events-none
+
+">
 
 
 <ThreeScene />
 
 
+</div>
+
+
+
 </motion.div>
+
+
 
 
 
