@@ -33,7 +33,7 @@ export default function Navbar(){
       top-6
       left-1/2
       -translate-x-1/2
-      z-50
+      z-[999]
 
       w-[90%]
       max-w-5xl
@@ -130,104 +130,82 @@ export default function Navbar(){
 
       {open && (
 
-            <div
+<div
 
-            className="
-            md:hidden
+className="
+md:hidden
 
-            absolute
+mt-4
 
-            top-full
+w-full
 
-            left-0
+rounded-2xl
 
-            mt-4
+border
 
-            w-full
+border-white/10
 
-            rounded-2xl
+bg-[#030712]
 
-            border
+backdrop-blur-xl
 
-            border-white/10
+p-6
 
-            bg-[#030712]/95
+flex
 
-            backdrop-blur-xl
+flex-col
 
-            p-6
+gap-6
 
-            flex
+text-white
 
-            flex-col
+relative
 
-            gap-5
+z-[999]
 
-            text-white
+"
 
-            shadow-xl
+>
 
-            "
-
-            >
-
-
-
-        <a 
-        href="#home"
-        onClick={()=>setOpen(false)}
-
-        className="
-        hover:text-cyan-400
-        transition
-        "
-        >
-        Identity
-        </a>
+<a
+href="#home"
+onClick={()=>setOpen(false)}
+className="hover:text-cyan-400"
+>
+Identity
+</a>
 
 
-        <a 
-        href="#projects"
-        onClick={()=>setOpen(false)}
-
-        className="
-        hover:text-cyan-400
-        transition
-        "
-        >
-        Projects
-        </a>
+<a
+href="#projects"
+onClick={()=>setOpen(false)}
+className="hover:text-cyan-400"
+>
+Projects
+</a>
 
 
-        <a 
-        href="#skills"
-        onClick={()=>setOpen(false)}
-
-        className="
-        hover:text-cyan-400
-        transition
-        "
-        >
-        Skills
-        </a>
+<a
+href="#skills"
+onClick={()=>setOpen(false)}
+className="hover:text-cyan-400"
+>
+Skills
+</a>
 
 
-        <a 
-        href="#contact"
-        onClick={()=>setOpen(false)}
-
-        className="
-        hover:text-cyan-400
-        transition
-        "
-        >
-        Contact
-        </a>
+<a
+href="#contact"
+onClick={()=>setOpen(false)}
+className="hover:text-cyan-400"
+>
+Contact
+</a>
 
 
-        </div>
+</div>
 
-      )}
+)}
 
 
 
